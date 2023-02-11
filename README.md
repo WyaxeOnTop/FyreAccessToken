@@ -5,7 +5,7 @@
 - Node.js
 - Kódszerkeztő (pl: Visual Studio Code)
 
-### Nyiss meg egy cmd-t és ezeket írd be mielőtt futatnád (ezt csak egyszer kell megtenned):
+### Nyiss meg egy cmd-t abban a mappában ahol van a fájl és ezeket írd be mielőtt futatnád (ezt csak egyszer kell megtenned):
  - npm i crypto
  - npm i node-fetch
  - npm i fs
