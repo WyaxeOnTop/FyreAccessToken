@@ -149,8 +149,8 @@ setInterval(()=>{
         szoveg = result;
         return;
       }
-          if(megvanacc == false) {  
-            fs.readFile('./wyaxe.txt', 'utf8', (err, data) => {
+      if(megvanacc == false) {  
+         fs.readFile('./wyaxe.txt', 'utf8', (err, data) => {
               if (err) throw err;
 
               let lines = data.split('\n');
@@ -176,13 +176,10 @@ setInterval(()=>{
               }
               szamsor += 1;
               console.log("\n" + szamsor + "    ++++++++       TOKEN: " + szoveg)
-            });
-
+        });
             let fmctokendata = szoveg + "\n";
             fs.appendFile('./wyaxe.txt', fmctokendata, (err) => {
               if (err) throw err;
-
-
             });
 
           }
