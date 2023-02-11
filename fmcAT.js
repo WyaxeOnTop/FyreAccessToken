@@ -2,7 +2,7 @@ const crypto = require("crypto");
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-let azonosito = "ide az uuid";
+let azonosito = "5a0d9ab5-abd6-4d2f-9b90-371ac28f127f";
 console.log(`Beállitott uuid: ${azonosito}`);
 
 const ezmegmi = JSON.parse(`
@@ -67,8 +67,8 @@ const ezmegmi = JSON.parse(`
            "java.class.version":"61.0"
         }`).toString();
 
-
 let megvanacc = false;
+let kuldesido = 800;// 1000 = 1mp
 
 async function sendResponse(fmctoken, fmcuuid, serverId, kuldjuzit) {
     let json = {};
@@ -115,7 +115,6 @@ async function sendResponse(fmctoken, fmcuuid, serverId, kuldjuzit) {
             console.log(`MEGVAN ${fmcdata.name} FIÓK`);
             megvanacc = true;
         }
-
     } catch(e) {
         throw e;
     }
@@ -145,12 +144,11 @@ setInterval(()=>{
             result += characters.charAt(Math.floor(Math.random() * characters.length));
           }
         }
-
         szoveg = result;
         return;
       }
-      if(megvanacc == false) {  
-         fs.readFile('./wyaxe.txt', 'utf8', (err, data) => {
+          if(megvanacc == false) {  
+            fs.readFile('./wyaxe.txt', 'utf8', (err, data) => {
               if (err) throw err;
 
               let lines = data.split('\n');
@@ -160,7 +158,7 @@ setInterval(()=>{
                     cooldowntime.add("wyaxe");
                     setTimeout(() => {
                       cooldowntime.delete("wyaxe");
-                    }, 800);
+                    }, kuldesido);
                     return generateAccesstoken();
                   }
                   
@@ -169,18 +167,18 @@ setInterval(()=>{
                     cooldowntime.add("wyaxe");
                     setTimeout(() => {
                       cooldowntime.delete("wyaxe");
-                    }, 800);
+                    }, kuldesido);
                     sendResponse(generateAccesstoken(), azonosito, "play.fyremc.hu", true);
                   }
                 }
               }
               szamsor += 1;
               console.log("\n" + szamsor + "    ++++++++       TOKEN: " + szoveg)
-        });
+            });
+
             let fmctokendata = szoveg + "\n";
             fs.appendFile('./wyaxe.txt', fmctokendata, (err) => {
               if (err) throw err;
             });
-
           }
-  }, 800)
+  }, kuldesido)
