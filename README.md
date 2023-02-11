@@ -5,7 +5,12 @@
 - Node.js
 - Kódszerkeztő (pl: Visual Studio Code)
 
-## Használat:
+### Nyiss meg egy cmd-t és ezeket írd be mielőtt futatnád (ezt csak egyszer kell megtenned):
+ - npm i crypto
+ - npm i node-fetch
+ - npm i fs
+
+### Használat:
   - Nyisd meg VSCben a fájlt és ahol van a `let azonosito = "ide az uuid";` oda írd be az uuid-t
   - Ahol van ez a fájl, oda csinálj egy `wyaxe` nevezetű szöveges fájlt, mivel oda fogja lejegyzetelni azt amit már tesztelt
   - Mentsd el és futtasd le a start.bat-ot 
