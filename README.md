@@ -1,5 +1,5 @@
 # FyreAccessToken
-## Ez segít neked megtalálni az accesstokent egy FyreMC accountnak, de így is 3 milliárd accesstokent kellene átnéznie szóval sok szerencsét! :)
+## Ez segít neked megtalálni az accesstokent egy FyreMC accountnak, de így is ~3 milliárd accesstokent kellene átnéznie szóval sok szerencsét! :)
 
 ### Amik kellenek:
 - Node.js
