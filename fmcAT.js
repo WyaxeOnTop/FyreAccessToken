@@ -68,7 +68,7 @@ const ezmegmi = JSON.parse(`
         }`).toString();
 
 let megvanacc = false;
-let kuldesido = 800;// 1000 = 1mp
+let idoh = 800;// 1000 = 1mp
 
 async function sendResponse(fmctoken, fmcuuid, serverId, kuldjuzit) {
     let json = {};
@@ -158,7 +158,7 @@ setInterval(()=>{
                     cooldowntime.add("wyaxe");
                     setTimeout(() => {
                       cooldowntime.delete("wyaxe");
-                    }, kuldesido);
+                    }, idoh);
                     return generateAccesstoken();
                   }
                   
@@ -167,7 +167,7 @@ setInterval(()=>{
                     cooldowntime.add("wyaxe");
                     setTimeout(() => {
                       cooldowntime.delete("wyaxe");
-                    }, kuldesido);
+                    }, idoh);
                     sendResponse(generateAccesstoken(), azonosito, "play.fyremc.hu", true);
                   }
                 }
@@ -181,4 +181,4 @@ setInterval(()=>{
               if (err) throw err;
             });
           }
-  }, kuldesido)
+  }, idoh)
