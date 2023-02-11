@@ -7,4 +7,5 @@
 
 ## Használat:
   - Nyisd meg VSCben a fájlt és ahol van a `let azonosito = "ide az uuid";` oda írd be az uuid-t
+  - Ahol van ez a fájl, oda csinálj egy `wyaxe` szöveges fájlt, mivel oda fogja lejegyzetelni azt amit már tesztelt
   - Mentsd el és futtasd le a start.bat-ot 
