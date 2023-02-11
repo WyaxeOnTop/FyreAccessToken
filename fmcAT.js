@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 
 let azonosito = "ide az uuid";
+console.log(`Beállitott uuid: ${azonosito}`);
 
 const ezmegmi = JSON.parse(`
         {
