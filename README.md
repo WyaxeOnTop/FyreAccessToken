@@ -6,4 +6,5 @@
 - Kódszerkeztő (pl: Visual Studio Code)
 
 ## Használat:
-  - Nyisd meg VSCben a fájlt és ahol van a `let azonosito = "ide az uuid";` oda írd be az uuid-t, mentsd el és futtasd le a start.bat-ot 
+  - Nyisd meg VSCben a fájlt és ahol van a `let azonosito = "ide az uuid";` oda írd be az uuid-t
+  - Mentsd el és futtasd le a start.bat-ot 
