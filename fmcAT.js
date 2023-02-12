@@ -2,7 +2,7 @@ const crypto = require("crypto");
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-let azonosito = "5a0d9ab5-abd6-4d2f-9b90-371ac28f127f";
+let azonosito = "";
 console.log(`Beállitott uuid: ${azonosito}`);
 
 const ezmegmi = JSON.parse(`
